@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="b3d052fd-a345-437e-bcf5-76c6ea1d8efd" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="mouniFlow" doc:id="b714a56f-85ce-41fa-ad35-340b83257e23" >
+		<http:listener doc:name="Listener" doc:id="574690f4-620d-4cd3-8690-ee20b0eb9034" config-ref="HTTP_Listener_config" path="/mouni"/>
+		<set-payload value='#[" mouni "]' doc:name="Set Payload" doc:id="1ce13593-dd34-4bf0-a19e-6a6bae353a80" />
+	</flow>
+</mule>
