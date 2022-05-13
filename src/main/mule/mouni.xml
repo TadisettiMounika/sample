@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="mouniFlow" doc:id="b714a56f-85ce-41fa-ad35-340b83257e23" >
 		<http:listener doc:name="Listener" doc:id="574690f4-620d-4cd3-8690-ee20b0eb9034" config-ref="HTTP_Listener_config" path="/mouni"/>
-		<set-payload value='#[" mouni "]' doc:name="Set Payload" doc:id="1ce13593-dd34-4bf0-a19e-6a6bae353a80" />
+		<set-payload value='#[" mounika "]' doc:name="Set Payload" doc:id="1ce13593-dd34-4bf0-a19e-6a6bae353a80" />
 	</flow>
 </mule>
